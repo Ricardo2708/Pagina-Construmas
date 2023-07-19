@@ -1,0 +1,226 @@
+.news{
+	text-align: center;
+	padding: 1rem 0;
+    position: relative;
+}
+.news .title{
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 700;
+}
+.news .title::after{
+    display: block;
+	content: '';
+	height: 5px;
+	border-bottom: 5px solid var(--primary);
+	max-width: 30%;
+    margin: 0 auto;
+}
+
+.news h1 span{
+	color: var(--primary);
+}
+
+.carousel{
+    position: relative;
+}
+#left-news,
+#right-news{
+    position: absolute;
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 3rem;
+    text-align: center;
+    color: #777;
+    font-size: 2.5rem;
+}
+#right-news{
+    left: -30px;
+}
+#left-news{
+    right: -30px;
+}
+@media(max-width:615px){
+    #right-news{
+        left: 0px;
+        display: block;
+    }
+    #left-news{
+        right: 0px;
+        display: block;
+    } 
+}
+
+@media(max-width:450px){
+    #right-news{
+        left: 0px;
+        display: block;
+    }
+    #left-news{
+        right: 0px;
+        display: block;
+    } 
+}
+
+
+
+.news-contenido{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding: 1rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    gap: 0rem;
+    transition: .3s all ease;
+    scroll-behavior: smooth;
+    position: relative;
+}
+@media(max-width:1020px){
+    .news-contenido2{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		gap: 2rem;
+	}
+}
+@media(max-width:992px){
+    .news-contenido2{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 2rem;
+	}
+}
+@media(max-width:615px){
+    .news-contenido2{
+        display: flex;
+        max-width: 30rem;
+        min-width: 30rem;
+        gap: 2.7rem;
+    }
+}
+
+.news-elemento{
+    padding: 1.5rem;
+    transition: all .5s ease;
+    min-width: 27.5rem;
+}
+.news-elemento:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 20px 0px #dbdbdb;
+}
+.news-elemento img{
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+.news-elemento .contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0 1rem 1rem;
+}
+
+.news-elemento .contenido h1{
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.news-elemento .contenido h4{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin: 0;
+}
+.news-elemento .contenido p{
+    text-align: center;
+    font-size: 1.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.news-elemento .contenido a{
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.7rem 1rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+.news-elemento .contenido button{
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+.news-elemento .contenido a i{
+    padding-left: .5rem;
+}
+.news-elemento .contenido a:hover{
+    background-color: transparent;
+	color: var(--primary);
+}
+.news-elemento .contenido button:hover{
+    background-color: transparent;
+	color: var(--primary);
+}
+
+.programs-enlace{
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.programs-enlace a{
+    background-color: var(--blue);
+	color: var(--white);
+    padding: 1.2rem 5rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.contenido-ultimate h1{
+    text-align: left !important;
+}
+
+.contenido-ultimate h4{
+    text-align: left !important;
+}
+
+.contenido-ultimate p{
+    text-align: left !important;
+}
+
+
+.news-contenido-ultimate{
+    gap: 2rem;
+}
+
+@media(max-width:615px){
+    .news-contenido-ultimate{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.news-contenido-ultimate .news-elemento img{
+    height: 20rem;
+    object-fit: cover;
+}

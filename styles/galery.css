@@ -1,0 +1,145 @@
+.galeria{
+    display: flex;
+    background-color: var(--primary);
+    padding: 4rem 0;
+}
+
+.galeria .title{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 0;
+}
+.galeria .title span{
+    color: var(--white);
+}
+.galeria .title::after{
+    display: block;
+    content: '';
+    height: 5px;
+    border-bottom: 10px solid var(--white);
+    max-width: 30%;
+}
+
+.galeria-grid-1{
+    display: flex;
+    width: 100%;
+    height: 30rem;
+}
+.galeria-grid-2{
+    display: none;
+}
+@media(max-width:450px){
+    .galeria-grid-1{
+        display: none;
+    }
+    .galeria-grid-2{
+        display: flex;
+    }
+}
+.galeria-grid-1  img{
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: .8s ease;
+    filter: grayscale(0);
+}
+.galeria-grid-1  img:hover{
+    cursor: crosshair;
+    width: 30rem;
+    opacity: 1;
+}
+
+/** Empleos **/
+
+.empleos{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.705)), url(../assets/oficina2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 4rem 0;
+}
+
+.contenedor-empleos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+@media(max-width:768px){
+    .contenedor-empleos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+    }
+}
+.empleos .titulo-empleos .title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+    
+}
+
+.empleos .titulo-empleos .title span{
+    color: var(--white);
+}
+.empleos .titulo-empleos .title::after{
+    display: block;
+    content: '';
+    height: 4px;
+    border-bottom: 5px solid var(--white);
+    max-width: 100%;
+}
+.empleos .titulo-empleos p{
+    color: var(--white);
+    font-weight: 100;
+    font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.empleos .contenedor-empleos a{
+    background-color: transparent;
+    border: 3px solid var(--white);
+	color: var(--white);
+    padding: 1rem 5rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+.empleos .contenedor-empleos a:hover{
+    background-color: var(--white);
+    border: 3px solid var(--white);
+    color: var(--black);
+}
+.empleos a i{
+    margin: 0rem 0.5rem;
+}
+
+
+/** Anuncio **/
+
+.anuncio{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/dut4o7zjk/image/upload/v1689779334/latas-vista-superior-pintura-naranja-amarilla_1_dsgano.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 6rem 0;
+}
+
+.anuncio .titulo-anuncio .title::after{
+    display: block;
+    content: '';
+    height: 4px;
+    border-bottom: 5px solid var(--white);
+    max-width: 70%;
+    margin: 0 auto;
+}

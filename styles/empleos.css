@@ -1,0 +1,463 @@
+body{
+    background-color: whitesmoke;
+}
+.empleo-article{
+    padding: 15rem 0;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+@media(max-width:992px){
+    .empleo-article{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    } 
+}
+.empleo-article .empleo-destacado{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.position-destacado{
+    position: relative;
+}
+.contenido-empleo-article{
+    padding: 2rem;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.contenido-empleo-article:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 10px 0px #dbdbdb;
+}
+.contenido-empleo-article figure .position-destacado img{
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    width: 100rem;
+}
+.position-destacado p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: #c90000;
+    padding: 0.5rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.descripcion-empleo-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+@media(max-width:768px){
+    .descripcion-empleo-article{
+        flex-direction: column;
+    }
+}
+.descripcion-empleo-article .titulo-descripcion h2{
+    margin: 0;
+}
+.descripcion-empleo-article .titulo-descripcion h4{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #888;
+}
+.descripcion-empleo-article .cantidad-empleo-article p{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.descripcion-empleo-article .cantidad-empleo-article h4{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.descripcion-empleo-article .cantidad-empleo-article p span{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.informacion-empleo-article ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+    .informacion-empleo-article ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+.informacion-empleo-article-modal{
+    margin-bottom: 1rem;
+}
+@media(max-width:768px){
+    .informacion-empleo-article-modal{
+        display: none;
+    }  
+}
+.informacion-empleo-article ul li{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.informacion-empleo-article-modal ul li{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0rem;
+}
+.informacion-empleo-article ul li .icono-informacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff00002f;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    text-align: center;
+}
+.informacion-empleo-article-modal ul li .icono-informacion{
+    background-color: transparent;
+}
+
+.informacion-empleo-article ul li i{
+    font-size: 2.2rem;
+    color: var(--primary);
+}
+.informacion-empleo-article ul li p{
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.informacion-empleo-article-modal ul li p{
+    font-size: 1rem;
+    color: #444;
+}
+
+.descripcionplaza-empleo-article{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+@media(max-width:768px){
+    .descripcionplaza-empleo-article{
+        display: flex;
+        flex-direction: column;
+    }
+    .descripcionplaza-empleo-article img{
+        display: none;
+    }
+}
+.descripcionplaza-empleo-article .formulario-mision .contenido-formulario{
+    background-color: transparent;
+    padding: 0;
+}
+.descripcionplaza-empleo-article  .contenido-mision .elemento-formulario input[type=text],
+.descripcionplaza-empleo-article  .contenido-mision .elemento-formulario input[type=email],
+.descripcionplaza-empleo-article  .contenido-mision .elemento-formulario input[type=tel],
+.descripcionplaza-empleo-article  .contenido-mision .elemento-formulario input[type=file]{
+	padding: 0.8rem 2rem;
+	border: 3px solid #dbdbdb;
+	width: 100%;
+	font-size: 1.5rem;
+}
+.descripcionplaza-empleo-article .contenido-mision .contenido-formulario input[type=submit],
+.descripcionplaza-empleo-article .contenido-mision .contenido-formulario input[type=button]{
+	padding: 1.2rem 2rem;
+	width: 100%;
+	border: none;
+	font-size: 1.5rem;
+	color: var(--white);
+	background-color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+}
+.descripcionplaza-empleo-article .texto-descripcion h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #555;
+}
+.descripcionplaza-empleo-article .texto-descripcion p{
+    font-size: 1.3rem;
+    text-align: left;
+    color: #888;
+}
+.descripcionplaza-empleo-article .texto-descripcion ul{
+    font-size: 1.3rem;
+    text-align: left;
+    color: #888;
+    list-style: circle;
+}
+.descripcionplaza-empleo-article .texto-descripcion button{
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 7rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.descripcionplaza-empleo-article .texto-descripcion a{
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 7rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.descripcionplaza-empleo-article .texto-descripcion button:hover{
+    background-color: transparent;
+	color: var(--primary);
+}
+.descripcionplaza-empleo-article .texto-descripcion a:hover{
+    background-color: transparent;
+	color: var(--primary);
+}
+.descripcionplaza-empleo-article .descripcion-imagen img{
+    height: 31rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+
+
+/** Lista Empleos **/
+.list-empleo-article{
+    padding: 2rem;
+    background-color: var(--white);
+    /* overflow-y: scroll;
+    min-height: 833px;
+    max-height: 833px;
+    overflow-x: hidden; */
+}
+.list-empleo-article .title-empleo h1{
+    margin: 0;
+    font-size: 3.2rem;
+    color: var(--primary);
+}
+.list-empleo-article .title-empleo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-empleo-article .title-empleo p{
+    margin: 0;
+    font-size: 1.3rem;
+}
+.list-empleo-article .title-empleo h1::after{
+    display: block;
+	content: '';
+	height: 5px;
+	border-bottom: 5px solid var(--primary);
+	max-width: 30%;
+}
+.list-element-empleo{
+    display: flex;
+    flex-direction: column;
+}
+
+.element-list{
+    background-color: whitesmoke;
+    padding: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.element-list:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 10px 0px #dbdbdb;
+}
+.element-list .image-element-list{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.element-list .image-element-list img{
+    height: 7rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    width: 8rem;
+}
+.element-list .image-element-list .text-element-list h4{
+    margin: 0;
+    text-transform: capitalize;
+}
+.element-list .image-element-list .text-element-list p{
+    margin: 0.2rem 0;
+    margin-top: 0;
+    color: #888;
+    font-size: 1.2rem;
+}
+.element-list .image-element-list .text-element-list p:last-of-type{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+.element-list .descripcion-element-list p{
+    font-size: 1.4rem;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.element-list a{
+    display: block;
+    border: 3px solid var(--black);
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+}
+.element-list a:hover{
+    border: 3px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+}
+
+.empleo-contenido_modal_api h1{
+    font-size: 3.2rem;
+}
+
+.empleo-contenido_modal_api .subtitle{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #888;
+}   
+.empleo-contenido_modal_api .fecha{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color:var(--primary);
+}   
+.empleo-contenido_modal_api .salario{
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.empleo-contenido_modal_api .salario span{
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.empleo-contenido_modal_api .funciones{
+    margin: 0;
+    color: #777;
+    font-size: 1.8rem;
+}
+.empleo-contenido_modal_api p{
+    font-size: 1.3rem;
+    text-align: left;
+    color: #888;
+    margin: 0;
+}
+
+.empleo-contenido_modal_api ul{
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: left;
+    color: #888;
+    list-style: circle;
+    margin-bottom: 1rem;
+}
+
+.empleo-contenido_modal_api a, button{
+    display: block;
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.9rem;
+	text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.empleo-contenido_modal_api a:hover, button:hover{
+    border: 3px solid var(--black);
+    background-color: transparent;
+    color: var(--black);
+}
+
+.modal_api-NoDestacado{
+    display: block;
+}
+
+.modal-Nodestacado{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.modal-Nodestacado form{
+    width: 50%;
+}
+.modal-Nodestacado form .contenido-formulario .elemento-formulario{
+    width: 35rem;
+}
+
+@media(max-width:992px){
+    .modal-Nodestacado{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .modal-Nodestacado form{
+        width: 100%;
+    }
+    .modal-Nodestacado form .contenido-formulario .elemento-formulario{
+        width: auto;
+    }
+}
+.empleo-contenido_modal_api{
+    overflow-y: scroll;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-x: hidden;
+}
+
+.iconos-modal-nodestacado ul{
+    justify-content: left;
+        gap: 2.5rem;
+}
